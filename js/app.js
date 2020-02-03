@@ -7,8 +7,7 @@ let playerTurn2 = $("#player-2");
 // plyer click button "X" Or "O"
 let player = $(".box");
 let player1 = "X";
-player.one("click", function () {
-
+const playerClick= function(){
   if (player1 === "X") {
     $(this).text("X");
     player1 = "O";
@@ -21,9 +20,9 @@ player.one("click", function () {
 
   }
   playerWin();
+}
+player.one("click",playerClick);
 
-
-});
 
 // varibale to call the the id for the button 
 let playerIndex1 = $("#box-1");
@@ -46,8 +45,6 @@ function playerWin() {
     alert("winnner");
 
 
-    //console.log(playerIndex1.text()=="X"+" 1");
-    //console.log(playerIndex2.text()=="X"+"  2");
   } else if (playerIndex4.text() == "X" && playerIndex5.text() == "X" && playerIndex6.text() == "X" || playerIndex4.text() == "O" && playerIndex5.text() == "O" && playerIndex6.text() == "O") {
     console.log("win");
     alert("winner");
@@ -97,22 +94,8 @@ let resetButton = $("#reset");
 resetButton.click(function () {
  
 player.text("");
-player.one("click", function () {
-  if (player1 === "X") {
-    $(this).text("X");
-    player1 = "O";
-    //playerTurn1.text(" x");
+player.one("click",playerClick);
 
-  } else {
-    $(this).text("O");
-    player1 = "X";
-    //playerTurn2.text(" O")
-
-  }
-  playerWin();
-
-
-});
 
 });
 
