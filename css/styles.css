@@ -1,0 +1,33 @@
+h1 {
+    text-align: center;
+}
+
+.Allbox {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0px;
+
+    padding: 10px;
+    margin: 0 600px 0 600px;
+}
+
+section button {
+    border: 4px solid black;
+    text-align: center;
+    font-size: 50px;
+    padding: 60px 60px;
+
+
+}
+
+#player-1 {
+    background-color: pink;
+    float: left;
+
+}
+
+#player-2 {
+    float: right;
+    background-color: pink;
+}
+meta
