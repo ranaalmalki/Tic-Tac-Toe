@@ -23,11 +23,18 @@ section button {
 #player-1 {
     background-color: pink;
     float: left;
+    font-size: 40px;
 
 }
 
 #player-2 {
     float: right;
     background-color: pink;
+    font-size: 40px;
+
 }
-meta
+#reset{
+    font-size: 50;
+    height: 100px;
+    width: 100px;
+}
