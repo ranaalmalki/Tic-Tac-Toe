@@ -1,5 +1,3 @@
-
-
 let playerTurn1 = $("#player-1");
 let playerTurn2 = $("#player-2");
 
@@ -7,24 +5,34 @@ let playerTurn2 = $("#player-2");
 // plyer click button "X" Or "O"
 let player = $(".box");
 let player1 = "X";
-const playerClick= function(){
+const playerClick = function () {
+
   if (player1 === "X") {
     $(this).text("X");
     player1 = "O";
-   // playerTurn1.text(" x");
+    playerTurn1.text("player x");
+    changeColor()
+    // playerTurn1.innerHTML = 'player X turn';
 
+ 
   } else {
     $(this).text("O");
     player1 = "X";
-    //playerTurn2.text(" O")
-
+    changeColor();
+    // playerTurn1.innerHTML = 'player O turn';
+  
   }
   playerWin();
 }
-player.one("click",playerClick);
+player.one("click", playerClick);
+function changeColor(){
+  if(player1 === "X"){
+  playerTurn2.css('background-color','red' )
+} else {
+  playerTurn1.css('background-color','red' )}
+}
 
-
-// varibale to call the the id for the button 
+// varibale to call the  id for the button 
 let playerIndex1 = $("#box-1");
 let playerIndex2 = $("#box-2");
 let playerIndex3 = $("#box-3");
@@ -47,6 +55,7 @@ function playerWin() {
 
   } else if (playerIndex4.text() == "X" && playerIndex5.text() == "X" && playerIndex6.text() == "X" || playerIndex4.text() == "O" && playerIndex5.text() == "O" && playerIndex6.text() == "O") {
     console.log("win");
+    player
     alert("winner");
     player.off("click");
 
@@ -86,23 +95,17 @@ function playerWin() {
 
     player.off("click");
 
-  } else {
+  } else if(player.text().length ===9){
     console.log("Tie");
+    alert("Tie ");
   }
 }
+
 let resetButton = $("#reset");
 resetButton.click(function () {
- 
-player.text("");
-player.one("click",playerClick);
+
+  player.text("");
+  player.one("click", playerClick);
 
 
 });
-
-
-
-
-
-
-
-
