@@ -1,36 +1,24 @@
-let playerTurn1 = $("#player-1");
-let playerTurn2 = $("#player-2");
-
-
-// plyer click button "X" Or "O"
 let player = $(".box");
 let player1 = "X";
+let playerTurn = $("footer");
+//function for player turn
 const playerClick = function () {
 
   if (player1 === "X") {
     $(this).text("X");
     player1 = "O";
-    playerTurn1.text("player x");
-    changeColor()
-    // playerTurn1.innerHTML = 'player X turn';
 
- 
   } else {
     $(this).text("O");
     player1 = "X";
-    changeColor();
-    // playerTurn1.innerHTML = 'player O turn';
-  
+
   }
   playerWin();
 }
+// plyer click button "X" Or "O"
+
 player.one("click", playerClick);
-function changeColor(){
-  if(player1 === "X"){
-  playerTurn2.css('background-color','red' )
-} else {
-  playerTurn1.css('background-color','red' )}
-}
+
 
 // varibale to call the  id for the button 
 let playerIndex1 = $("#box-1");
@@ -48,59 +36,62 @@ function playerWin() {
 
   if (playerIndex1.text() == "X" && playerIndex2.text() == "X" && playerIndex3.text() == "X" || playerIndex1.text() == "O" && playerIndex2.text() == "O" && playerIndex3.text() == "O") {
     console.log("win");
+    // off method to stop the click event
     player.off("click");
-
-    alert("winnner");
-
-
+swal.fire("winner","","success");
   } else if (playerIndex4.text() == "X" && playerIndex5.text() == "X" && playerIndex6.text() == "X" || playerIndex4.text() == "O" && playerIndex5.text() == "O" && playerIndex6.text() == "O") {
     console.log("win");
     player
-    alert("winner");
+    swal.fire("winner","","success");
     player.off("click");
 
   } else if (playerIndex7.text() == "X" && playerIndex8.text() == "X" && playerIndex9.text() == "X" || playerIndex7.text() == "O" && playerIndex8.text() == "O" && playerIndex9.text() == "O") {
     console.log("win");
-    alert("winner");
+    swal.fire("winner","","success");
 
     player.off("click");
 
   } else if (playerIndex1.text() == "X" && playerIndex4.text() == "X" && playerIndex7.text() == "X" || playerIndex1.text() == "O" && playerIndex4.text() == "O" && playerIndex7.text() == "O") {
     console.log("win");
-    alert("winner");
+    swal.fire("winner","","success");
+
 
     player.off("click");
 
   } else if (playerIndex2.text() == "X" && playerIndex5.text() == "X" && playerIndex8.text() == "X" || playerIndex2.text() == "O" && playerIndex5.text() == "O" && playerIndex8.text() == "O") {
     console.log("win");
-    alert("winner");
+    swal.fire("winner","","success");
+
 
     player.off("click");
 
   } else if (playerIndex3.text() == "X" && playerIndex6.text() == "X" && playerIndex9.text() == "X" || playerIndex3.text() == "O" && playerIndex6.text() == "O" && playerIndex9.text() == "O") {
     console.log("win");
-    alert("winner");
+    swal.fire("winner","","success");
+
 
     player.off("click");
 
   } else if (playerIndex1.text() == "X" && playerIndex5.text() == "X" && playerIndex9.text() == "X" || playerIndex1.text() == "O" && playerIndex5.text() == "O" && playerIndex9.text() == "O") {
     console.log("win");
-    alert("winner");
+    swal.fire("winner","","success");
+
 
     player.off("click");
 
   } else if (playerIndex3.text() == "X" && playerIndex5.text() == "X" && playerIndex7.text() == "X" || playerIndex3.text() == "O" && playerIndex5.text() == "O" && playerIndex7.text() == "O") {
     console.log("win");
-    alert("winner");
+    swal.fire("winner","","success");
+
 
     player.off("click");
 
-  } else if(player.text().length ===9){
+  } else if (player.text().length === 9) {
     console.log("Tie");
     alert("Tie ");
   }
 }
-
+// function to resart the game 
 let resetButton = $("#reset");
 resetButton.click(function () {
 
