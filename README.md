@@ -3,11 +3,11 @@
 ## Describe how you solved for the winner
 
 ### List technologies used :
-1. HTML(Hyper Text Markup Language).
-2. CSS (Cascading Style Sheets ).
-3. JavaScript
-4. JQuery
-5. Visual Studio
+* HTML(Hyper Text Markup Language).
+* CSS (Cascading Style Sheets ).
+* JavaScript.
+* JQuery.
+* Visual Studio.
 
 
 
