@@ -13,14 +13,16 @@ const playerClick = function () {
     player1 = "X";
 
   }
+  // cal the function to check the winner 
   playerWin();
+  
 }
-// plyer click button "X" Or "O"
+// player click event button "X" Or "O"
 
 player.one("click", playerClick);
 
 
-// varibale to call the  id for the button 
+//  declare variable to call and select the  id for the button 
 let playerIndex1 = $("#box-1");
 let playerIndex2 = $("#box-2");
 let playerIndex3 = $("#box-3");
@@ -33,11 +35,12 @@ let playerIndex9 = $("#box-9");
 
 // function to check the win 
 function playerWin() {
-
+// to select and display the winner message
   if (playerIndex1.text() == "X" && playerIndex2.text() == "X" && playerIndex3.text() == "X" || playerIndex1.text() == "O" && playerIndex2.text() == "O" && playerIndex3.text() == "O") {
     console.log("win");
     // off method to stop the click event
     player.off("click");
+    //display the message
 swal.fire("winner","","success");
   } else if (playerIndex4.text() == "X" && playerIndex5.text() == "X" && playerIndex6.text() == "X" || playerIndex4.text() == "O" && playerIndex5.text() == "O" && playerIndex6.text() == "O") {
     console.log("win");
@@ -85,7 +88,7 @@ swal.fire("winner","","success");
 
 
     player.off("click");
-
+//condition for check the tie
   } else if (player.text().length === 9) {
     console.log("Tie");
     alert("Tie ");
