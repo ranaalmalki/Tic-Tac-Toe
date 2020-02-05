@@ -27,10 +27,12 @@ at first i declaer a varibale to select each of the index separately then a wrot
 
 ### Describe how some of your favorite functions work
   <pre>
-   **Hello** `world`.
+    ```Jquery
+ let resetButton = $("#reset");
+resetButton.click(function () {
 
-   ```javascript
-   alert('Hello syntax highlighting.');
+  player.text("");
+  player.one("click", playerClick);
    ```
    </pre>
 
