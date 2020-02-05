@@ -11,6 +11,7 @@ h1 {
 	grid-gap: 0px;
 	padding: 100px 200px;
 	justify-content: center;
+	
 
 }
 
@@ -32,6 +33,8 @@ h1 {
 	text-align: center;
 	font-size: 30px;
 	background-attachment: fixed;
+	width:109px;
+	height: 120px;
 
 }
 
@@ -70,6 +73,8 @@ body {
 	background-attachment: fixed;
 	background-size: 600px;
 	margin: auto;
+	
+
 }
 
 #reset {
@@ -104,21 +109,32 @@ body {
 	top: 500px;
 	bottom: 0;
 	left: 0;
-	margin: auto;
-	position: absolute;
 }
 
 footer {
-	/* 
 	
-	
-	margin-bottom: 50px; */
 	background-color: #408c99;
-	position: absolute;
 	text-align: center;
-	bottom: 100px;
+	bottom: 0px;
 	height: 50px;
 	width: 100%;
 	overflow: hidden;
 	font-size: 40px;
+}
+
+@media only screen and (max-device-width:900px) {
+	.Allbox{
+	padding-top: 110px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+	}
+	footer{
+position: absolute;
+	}
+	.box{
+		height: 50px ;
+		width: 5px 5px;
+	}
+	
 }
