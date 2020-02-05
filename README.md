@@ -3,11 +3,11 @@
 ## Describe how you solved for the winner
 
 ### List technologies used :
-1. HTML(Hyper Text Markup Language).
-2. CSS (Cascading Style Sheets ).
-3. JavaScript
-4. JQuery
-5. Visual Studio
+* HTML(Hyper Text Markup Language).
+* CSS (Cascading Style Sheets ).
+* JavaScript.
+* JQuery.
+* Visual Studio.
 
 
 
@@ -34,6 +34,7 @@ As a user, I should be able to play the game again without refreshing the page
 
 ### Describe how some of your favorite functions work
   <pre>
+<<<<<<< HEAD
   // 
 
    ```Jquery
@@ -45,6 +46,14 @@ resetButton.click(function () {
 
 
 });
+=======
+    ```Jquery
+ let resetButton = $("#reset");
+resetButton.click(function () {
+
+  player.text("");
+  player.one("click", playerClick);
+>>>>>>> 7d11f73d234883c9419ca7ffc747a1db7bbcf2db
    ```
    </pre>
 
