@@ -34,7 +34,6 @@ As a user, I should be able to play the game again without refreshing the page
 
 ### Describe how some of your favorite functions work
   <pre>
-<<<<<<< HEAD
   // 
 
    ```Jquery
@@ -46,14 +45,6 @@ resetButton.click(function () {
 
 
 });
-=======
-    ```Jquery
- let resetButton = $("#reset");
-resetButton.click(function () {
-
-  player.text("");
-  player.one("click", playerClick);
->>>>>>> 7d11f73d234883c9419ca7ffc747a1db7bbcf2db
    ```
    </pre>
 
